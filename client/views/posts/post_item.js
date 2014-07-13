@@ -22,8 +22,9 @@ Template.postItem.helpers({
     var post = _.extend({}, Positions.findOne({postId: this._id}), this);
     var newPosition = post._rank * POST_HEIGHT;
     var attributes = {};
-    
-    if (! _.isUndefined(post.position)) {
+    if (_.isUndefined(post.position)) {
+	    attributes.class = 'post invisible';
+	  } else {
       var delta = post.position - newPosition;      
       attributes.style = "top: " + delta + "px";
       if (delta === 0)
