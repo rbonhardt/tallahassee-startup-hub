@@ -1,6 +1,12 @@
 <template name="profile">
     <h4>Username</h4>
     <p>{{username}}</p>
-    <h4>name</h4>
+    <h4>Name</h4>
     <p>{{name}}</p>
+    <h4>Twitter Handle</h4>
+    <p><a href="http://twitter.com/{{twitter_handle}}" target="_blank">{{twitter_handle}}</a></p>
+    <p>
+	    <a href="{{pathFor 'profileEdit'}}" class="btn">Edit</a>
+	  </p>
+
 </template>

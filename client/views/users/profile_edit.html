@@ -1,0 +1,25 @@
+<template name="profileEdit">
+  <form class="main">
+
+    <div class="control-group">
+        <label class="control-label" for="name">Name</label>
+        <div class="controls">
+            <input name="name" type="text" value="{{profile.name}}" placeholder="Your Name"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="title">Twitter Handle</label>
+        <div class="controls">
+            @ <input name="twitter_handle" type="text" value="{{profile.twitter_handle}}" placeholder="Your Twitter Handle without the @"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Submit" class="btn btn-primary submit"/>
+        </div>
+    </div>
+
+  </form>
+</template>
