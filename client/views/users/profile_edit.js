@@ -5,11 +5,11 @@ Template.profileEdit.events({
     var currentUserId = Meteor.user()._id;
 
     var userProperties = {
-      name: $(e.target).find('[name=name]').val(),
-      twitter_handle: $(e.target).find('[name=twitter_handle]').val()
+      'profile.name': $(e.target).find('[name=name]').val(),
+      'profile.twitter_handle': $(e.target).find('[name=twitter_handle]').val()
     }
 
-    Meteor.users.update(currentUserId, {$set: userProperties}, function(error) {
+    Meteor.users.update({_id: Meteor.user()._id}, {$set: userProperties}, function(error) {
       if (error) {
         // display the error to the user
         alert(error.reason);
