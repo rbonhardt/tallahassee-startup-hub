@@ -3,7 +3,7 @@ if (Posts.find().count() === 0) {
   var now = new Date().getTime();
   // create two users
   var tomId = Meteor.users.insert({
-    profile: { name: 'Tom Coleman' }
+    profile: { name: 'Tom Coleman', twitter_handle: 'tommyboy' }
   });
   var tom = Meteor.users.findOne(tomId);
   var sachaId = Meteor.users.insert({
