@@ -10,6 +10,11 @@ Template.postItem.helpers({
     a.href = this.url;
     return a.hostname;
   },
+  // Goes with the moment package
+  ago: function() {
+    time = this.submitted;
+    return moment(time).fromNow();
+  },
   upvotedClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.upvoters, userId)) {

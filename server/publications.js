@@ -13,7 +13,3 @@ Meteor.publish('comments', function(postId) {
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId});
 });
-
-Meteor.publish('user_twitter', function(postId) {
-	return Meteor.users.find({}, {fields: {'profile.twitter_handle': 1}});
-})
